@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    text-align: center;
+}
+
+h1 {
+    font-size: 140px;
+    color: cadetblue;
+    margin-bottom: 20px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+}

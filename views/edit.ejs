@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRecipe</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-6 mt-5">
+                <h1>Edit: <%= recipe.name %></h1>
+                <form action="/recipes/<%= recipe._id %>/edit?_method=PUT" method="post">
+                    <div class="row pt-3">
+                        <div class="col-6">
+                            <label for="recipeName">Recipe Name</label>
+                            <input type="text" name="name" class="form-control" value="<%= recipe.name %>" id="recipeName" placeholder="Type name here.." required>
+                        </div>
+                        <div class="col-6">
+                            <label for="prepTime">Preparation Time</label>
+                            <input type="text" name="preparationTime" class="form-control" value="<%= recipe.preparationTime %>" id="prepTime" placeholder="Minutes here.." required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUrl">Image Url</label>
+                        <input type="text" name="image" class="form-control" value="<%= recipe.image %>" id="imageUrl" placeholder="Paste url here.." required>
+                    </div>
+                    <div class="row g-0 pt-3">
+                        <div class="col-8">
+                            <label for="ingText">Add Ingredient</label>
+                            <input type="text" class="form-control" id="ingText"></input>
+                        </div>
+                        <div class="col-3 align-self-end ms-1">
+                            <button class="btn btn-primary" id="addIng">Add Item</button>
+                        </div>
+                    </div> 
+                    <div class="container">
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <label for="ingList">Ingredients:</label>
+                                <div class="list-group" id="ingList">
+                                    <% for (let ing of recipe.ingredients) { %>
+                                        <button type="button" class="list-group-item list-group-item-action ingredient">
+                                            <p style="display: inline;"><%= ing %></p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="form-group pt-3">
+                        <label for="instructions">Instructions</label>
+                        <textarea class="form-control" name="instructions" id="instructions" rows="7" required><%= recipe.instructions %></textarea>
+                    </div>
+                    <div class="form-group pt-3">
+                        <label for="briefDescription">Brief Description</label>
+                        <textarea class="form-control" name="briefDescription" id="briefDescription" rows="7" required><%= recipe.briefDescription %></textarea>
+                    </div>
+
+                    <div class="row g-1 mt-3">
+                        <div class="col-2">
+                            <button class="btn btn-primary" id="submitBtn">Save Edit</button>
+                        </div>
+                        <div class="col-2">
+                            <a href="/recipes/<%= recipe._id %>" class="btn btn-danger">Cancel</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/edit.js"></script>
+</body>
+
+</html >

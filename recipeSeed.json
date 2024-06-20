@@ -1,0 +1,144 @@
+[
+    {
+        "name": "Chocolate Chip Cookies",
+        "preparationTime": 30,
+        "ingredients": [
+            "Flour\r\n\r\n ",
+            "Sugar\r\n\r\n ",
+            "Butter ",
+            "Eggs\r\n\r\n ",
+            "Chocolate Chips\r\n\r\n "
+        ],
+        "image": "https://www.allrecipes.com/thmb/d9Hja4XwGZ49d2NW5x7C5ThjN9Q=/160x90/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/22704-chocolate-chip-cookies-DotD-MFS-74-a49d474b413c4b33bcdc2ff3837c1f94.jpg",
+        "instructions": "Bake at 350 degrees for 10-12 minutes.",
+        "briefDescription": "Classic chocolate chip cookies.",
+        "__v": 0
+    },
+    {
+        "name": "Caesar Salad",
+        "preparationTime": 15,
+        "ingredients": [
+            "Romaine Lettuce\r\n\r\n ",
+            "Croutons\r\n\r\n ",
+            "Parmesan Cheese ",
+            "Caesar Dressing\r\n\r\n ",
+            "Chicken Breast\r\n\r\n "
+        ],
+        "image": "https://www.allrecipes.com/thmb/UB3_ksILb6MyDiXgXlwVum7M4sk=/160x90/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/24202-Classic-Caesar-Salad-MEREDITH-45-e106ef3f87ff47b2ab60fbe3ab0b87f1.jpg",
+        "instructions": "Toss all ingredients together and serve.",
+        "briefDescription": "A refreshing Caesar salad.",
+        "__v": 0
+    },
+    {
+        "name": "Spaghetti Carbonara",
+        "preparationTime": 25,
+        "ingredients": [
+            "Spaghetti\r\n\r\n ",
+            "Bacon\r\n\r\n ",
+            "Eggs ",
+            "Parmesan Cheese\r\n\r\n ",
+            "Black Pepper\r\n\r\n "
+        ],
+        "image": "https://www.allrecipes.com/thmb/FeA6kCNU6wzvSeSdfMcNmEKU4RU=/160x90/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/213831-spaghetti-alla-carbonara-photo-by-meredith-6500478e119b4420bfa14450ed1710b3.jpg",
+        "instructions": "Mix all ingredients with cooked spaghetti and serve.",
+        "briefDescription": "A classic Italian pasta dish.",
+        "__v": 0
+    },
+    {
+        "name": "Beef Tacos",
+        "preparationTime": 20,
+        "ingredients": [
+            "Ground Beef\r\n\r\n ",
+            "Taco Shells\r\n\r\n ",
+            "Cheese ",
+            "Lettuce\r\n\r\n ",
+            "Tomato\r\n\r\n ",
+            "Sour Cream\r\n\r\n "
+        ],
+        "image": "https://www.allrecipes.com/thmb/Fm23ftnvkM8BKo-6jpkhbV8uQ8Y=/160x90/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/218091-beef-tacos-DDMFS-236-cd88e3c2a3b34bbdb1be5cb09fa1db1f.jpg",
+        "instructions": "Cook ground beef and assemble tacos with desired toppings.",
+        "briefDescription": "Delicious beef tacos.",
+        "__v": 0
+    },
+    {
+        "name": "Chicken Alfredo",
+        "preparationTime": 30,
+        "ingredients": [
+            "Fettuccine\r\n\r\n ",
+            "Chicken Breast\r\n\r\n ",
+            "Heavy Cream ",
+            "Parmesan Cheese\r\n\r\n ",
+            "Garlic\r\n\r\n ",
+            "Butter\r\n\r\n "
+        ],
+        "image": "https://www.allrecipes.com/thmb/5TDWm7E_JH0HTxRxMBTYlA1Uv48=/160x90/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/17644-chicken-alfredo-MEREDITH-2x3-2978-8f75d5c24bb9453b9cc8e2b8eaf001ad.jpg",
+        "instructions": "Cook fettuccine and chicken, then combine with sauce ingredients.",
+        "briefDescription": "Creamy chicken Alfredo pasta.",
+        "__v": 0
+    },
+    {
+        "name": "Greek Salad",
+        "preparationTime": 15,
+        "ingredients": [
+            "Cucumber\r\n\r\n ",
+            "Tomato\r\n\r\n ",
+            "Red Onion ",
+            "Feta Cheese\r\n\r\n ",
+            "Olives\r\n\r\n ",
+            "Olive Oil\r\n\r\n ",
+            "Oregano\r\n\r\n "
+        ],
+        "image": "https://www.allrecipes.com/thmb/RFXmb8LOJ1E3J5WQ08U8TLHEIkI=/160x90/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/13119-greek-salad-2x3-MEREDITH-6613468-7d5bc52b9202416fbe295160f0a7e13d.jpg",
+        "instructions": "Combine all ingredients and drizzle with olive oil.",
+        "briefDescription": "A fresh and healthy Greek salad.",
+        "__v": 0
+    },
+    {
+        "name": "Pancakes",
+        "preparationTime": 20,
+        "ingredients": [
+            "Flour\r\n\r\n ",
+            "Milk\r\n\r\n ",
+            "Eggs ",
+            "Baking Powder\r\n\r\n ",
+            "Salt\r\n\r\n ",
+            "Sugar\r\n\r\n "
+        ],
+        "image": "https://www.allrecipes.com/thmb/OMN4JIsK4frXM5fxDZXYHmcObog=/160x90/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/5082055-pancakes-DDMFS-1x1-0025-2000-9b56e62b78f341d999b1b46c82a07c6f.jpg",
+        "instructions": "Mix all ingredients and cook on a griddle.",
+        "briefDescription": "Fluffy and delicious pancakes.",
+        "__v": 0
+    },
+    {
+        "name": "Guacamole",
+        "preparationTime": 10,
+        "ingredients": [
+            "Avocados\r\n\r\n ",
+            "Lime Juice\r\n\r\n ",
+            "Salt ",
+            "Cilantro\r\n\r\n ",
+            "Onion\r\n\r\n ",
+            "Tomato\r\n\r\n ",
+            "Jalapeno\r\n\r\n "
+        ],
+        "image": "https://www.allrecipes.com/thmb/Hg5H8GNO5Iot6FECzUwCJmLlVUY=/160x90/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/14025-guacamole-mfs-124511-195-4x3-baa4f7d9b59d4299a25e4990f84c0071.jpg",
+        "instructions": "Mash avocados and mix with other ingredients.",
+        "briefDescription": "Creamy and spicy guacamole.",
+        "__v": 0
+    },
+    {
+        "name": "Margherita Pizza",
+        "preparationTime": 30,
+        "ingredients": [
+            "Pizza Dough\r\n\r\n ",
+            "Tomato Sauce\r\n\r\n ",
+            "Mozzarella Cheese ",
+            "Basil Leaves\r\n\r\n ",
+            "Olive Oil\r\n\r\n "
+        ],
+        "image": "https://www.allrecipes.com/thmb/hfEKohqrr9bSNNkgkYdl8auWBZk=/160x90/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/188628-homemade-margherita-pizza-DDMFS-4x3-6488e73507d94d7b9a1471cf02a14a26.jpg",
+        "instructions": "Top dough with sauce, cheese, and basil; bake until crust is golden.",
+        "briefDescription": "Classic Margherita pizza.",
+        "__v": 0
+    }
+]

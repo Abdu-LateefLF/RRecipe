@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/view.css">
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+
+    <div class="container">
+        <%- include('partials/flash') %>
+
+        <h1>Manage Recipes</h1>
+
+        <div>
+            <h3>My Recipes</h3>
+            <a href="/recipes/new" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+              </svg> Create Recipe</a>
+        </div>
+        <form class="form mt-3" action="/recipes" method="get">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search" name="search" id="searchBar" value="<%= search %>">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon1" <%= search !== ""? "" : "hidden"%>>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                      </svg>
+                </button>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+              </div>
+        </form>
+        </div>
+    </div>
+    <div id="recipeWindow">
+        <% for (let recipe of recipes) { %>
+            <div class="card me-2 mt-2" style="width: 18rem; display: inline-block;">
+                <img src="<%= recipe.image %>" class="card-img-top img-fluid" style="width: 300px; height: 250px;">
+                <div class="card-body">
+                  <h5 class="card-title mb-0"><%= recipe.name %></h5>
+                  <p class="card-text-sm mb-1">Prep Time: <%= recipe.preparationTime %></p>
+                  <p class="card-text"><%= recipe.briefDescription %></p>
+                  <a href="/recipes/<%= recipe._id %>" class="btn btn-primary">View</a>
+                </div>
+              </div>
+        <% } %>
+    </div>
+
+    <script src="/js/view.js"></script>
+
+</body>
+</html>
