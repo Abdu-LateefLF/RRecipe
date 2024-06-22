@@ -19,6 +19,9 @@ const MongoStore = require('connect-mongo');
 // 'mongodb://127.0.0.1:27017/rrecipe'
 mongoose.connect(process.env.DB_URL).then(() => {
     console.log('Mongo Connection Successful!');
+}).catch(err => {
+    console.error('Mongo Connection Error:', err);
+    process.exit(1);
 });
 
 const store = MongoStore.create({
@@ -76,9 +79,11 @@ app.use((req, res, next) => {
 app.use('/', loginRoutes);
 app.use('/recipes', recipeRoutes);
 
+/*
 app.use((req, res) => {
     res.status(404).send('No page found!');
 });
+*/
 
 // Error Handler
 app.use((err, req, res, next) => {
@@ -86,8 +91,9 @@ app.use((err, req, res, next) => {
     res.status(status).send(message);
 });
 
+const port = process.env.PORT || 3000
 // Start Server
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Started server on port 3000');
 });
 
