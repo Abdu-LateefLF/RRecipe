@@ -79,11 +79,10 @@ app.use((req, res, next) => {
 app.use('/', loginRoutes);
 app.use('/recipes', recipeRoutes);
 
-/*
 app.use((req, res) => {
     res.status(404).send('No page found!');
 });
-*/
+
 
 // Error Handler
 app.use((err, req, res, next) => {
