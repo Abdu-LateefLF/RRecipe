@@ -21,7 +21,6 @@ mongoose.connect(process.env.DB_URL).then(() => {
     console.log('Mongo Connection Successful!');
 }).catch(err => {
     console.error('Mongo Connection Error:', err);
-    process.exit(1);
 });
 
 const store = MongoStore.create({
