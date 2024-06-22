@@ -4,7 +4,12 @@ const router = express.Router();
 const Recipe = require('../models/recipe.js');
 const AppError = require('../AppError.js');
 const { isLoggedIn } = require('../Utils.js');
-const { seedDatabase } = require('../seed.js');
+
+// Shortens a paragraph if its character count is greater than the max specified
+const shorten = (max, paragraph) => {
+    if (paragraph.length <= max) return paragraph;
+    return paragraph.slice(0, max - 3) + "..";
+}
 
 router.get('/', isLoggedIn, async (req, res) => {
 
@@ -14,7 +19,8 @@ router.get('/', isLoggedIn, async (req, res) => {
     await user.populate('recipes');
 
     const recipes = await Recipe.find({ name: { $regex: search, $options: 'i' }, _id: { $in: [...user.recipes] } });
-    res.render('view', { recipes, search });
+
+    res.render('view', { recipes, search, shorten });
 });
 
 router.get('/new', isLoggedIn, (req, res) => {
