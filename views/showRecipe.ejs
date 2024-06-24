@@ -15,11 +15,13 @@
     <%- include('partials/navbar') %>
 
     <div class="container">
+        <%- include('partials/flash') %>
+
         <h1>View Recipe: <%= recipe.name %></h1>
         <h5>Prep Time: <%= recipe.preparationTime %> min(s)</h3>
 
         <div class="row mt-3">
-            <div class="col-4">
+            <div class="col-lg-6">
                 <label for="description">Description:</label>
                 <p class="border border-1" id="description"><%= recipe.briefDescription %></p>
                 <div>
@@ -31,7 +33,7 @@
                       </ul>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-6">
                 <label for="instructions">Instructions:</label>
                 <p class="border border-1" id="instructions"><%= recipe.instructions %></p>
             </div>

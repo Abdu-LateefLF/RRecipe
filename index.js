@@ -71,6 +71,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req, res, next) => {
     res.locals.currentUser = req.user;
     res.locals.failure = req.flash('failure');
+    res.locals.success = req.flash('success');
     next();
 });
 
@@ -80,13 +81,6 @@ app.use('/recipes', recipeRoutes);
 
 app.use((req, res) => {
     res.status(404).send('No page found!');
-});
-
-
-// Error Handler
-app.use((err, req, res, next) => {
-    const { status = 500, message = 'Something Went Wrong' } = err;
-    res.status(status).send(message);
 });
 
 const port = process.env.PORT || 3000

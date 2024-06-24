@@ -18,9 +18,9 @@
         <%- include('partials/flash') %>
 
         <div class="row justify-content-center">
-            <div class="col-6 mt-5">
+            <div class="col-md-6 mt-5">
                 <h1>Create A New Recipe</h1>
-                <form action="/recipes/new" method="post" novalidate class="needs-validation">
+                <form action="/recipes/new" method="post">
                     <div class="row pt-3">
                         <div class="col-6">
                             <label for="recipeName">Recipe Name</label>
@@ -83,28 +83,5 @@
 
     <script src="/js/new.js"></script>
 </body>
-
-<script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-        'use strict'
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-            })
-    })()
-</script>
 
 </html >

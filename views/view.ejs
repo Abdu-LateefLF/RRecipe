@@ -54,6 +54,12 @@
                 </div>
               </div>
         <% } %>
+        <% if (recipes.length === 0 && search === "") {%>
+            <p>You have no recipes! Create some new ones.</p>
+        <% } %>
+        <% if (recipes.length === 0 && search !== "") {%>
+            <p>No recipes match your search!</p>
+        <% } %>
     </div>
 
     <script src="/js/view.js"></script>

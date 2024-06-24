@@ -13,10 +13,11 @@
 
 <body>
     <%- include('partials/navbar') %>
+    <%- include('partials/flash') %>
 
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-6 mt-5">
+            <div class="col-md-6 mt-5">
                 <h1>Edit: <%= recipe.name %></h1>
                 <form action="/recipes/<%= recipe._id %>/edit?_method=PUT" method="post">
                     <div class="row pt-3">

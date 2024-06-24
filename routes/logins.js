@@ -1,9 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
+const Joi = require('joi');
 
 const AppError = require('../AppError.js');
 const User = require('../models/user.js');
+
+// Create a schema that we can use to test user inputs
+const userSchema = Joi.object({
+    firstName: Joi.string().required().max(30),
+    lastName: Joi.string().required().max(30),
+    username: Joi.string().required().max(30),
+    password: Joi.string().required().max(50)
+});
 
 // Home route
 router.get('/', (req, res) => {
@@ -24,7 +33,15 @@ router.get('/register', async (req, res) => {
 });
 
 router.post('/register', async (req, res) => {
+    const { error } = userSchema.validate(req.body);
+
     try {
+        // Ensure that all fields were entered correctly
+        if (error) {
+            const msg = error.details.map(el => el.message).join(',');
+            throw new AppError(msg, 400);
+        }
+
         const { firstName, lastName, username, password } = req.body;
 
         const user = new User({ firstName, lastName, username });
@@ -35,11 +52,11 @@ router.post('/register', async (req, res) => {
             if (err) {
                 res.redirect('/');
             } else {
+                req.flash('success', 'Your Account Was Successfully Created!');
                 res.redirect('/recipes');
             }
         });
     } catch (e) {
-        console.log(e);
         req.flash('failure', e.message);
         res.redirect('/register');
     }
@@ -47,9 +64,8 @@ router.post('/register', async (req, res) => {
 
 router.get('/logout', (req, res) => {
     req.logout(() => {
-        console.log('Logout Successful');
+        res.redirect('/');
     });
-    res.redirect('/');
 })
 
 module.exports = router;
